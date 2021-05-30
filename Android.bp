@@ -13,4 +13,4 @@ cc_library_static {
     },
 }
 
-subdirs = ["libelf"]
+subdirs = ["libelf", "libdw", ]
