@@ -14,3 +14,17 @@ cc_library_static {
 }
 
 subdirs = ["libelf", "libdw", ]
+
+
+cc_binary {
+    name: "dw_test",
+    srcs: ["dw_test.c"],
+    shared_libs: [],
+    static_libs: [
+        "libdw",
+        "libelf",
+        "libelf_headers",
+        "libz",
+    ],
+    include_dirs: [ "external/elfutils/libelf", ],
+}

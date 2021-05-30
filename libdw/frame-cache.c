@@ -65,6 +65,6 @@ __libdw_destroy_frame_cache (Dwarf_CFI *cache)
   tdestroy (cache->cie_tree, free_cie);
   tdestroy (cache->expr_tree, free_expr);
 
-  if (cache->ebl != NULL && cache->ebl != (void *) -1l)
-    ebl_closebackend (cache->ebl);
+  // if (cache->ebl != NULL && cache->ebl != (void *) -1l)
+  //   ebl_closebackend (cache->ebl);
 }

@@ -129,10 +129,10 @@ check_section (Dwarf *result, GElf_Ehdr *ehdr, Elf_Scn *scn, bool inscngrp)
     /* A section appears twice.  That's bad.  We ignore the section.  */
     return result;
 
-  /* We cannot know whether or not a GNU compressed section has already
-     been uncompressed or not, so ignore any errors.  */
-  if (gnu_compressed)
-    elf_compress_gnu (scn, 0, 0);
+  // /* We cannot know whether or not a GNU compressed section has already
+  //    been uncompressed or not, so ignore any errors.  */
+  // if (gnu_compressed)
+  //   elf_compress_gnu (scn, 0, 0);
 
   if ((shdr->sh_flags & SHF_COMPRESSED) != 0)
     {
